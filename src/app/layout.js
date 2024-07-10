@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import Script from "next/script";
 import Footer from "./Components/Footer/page";
 import Header from "./Components/Header/page";
 import "./globals.css";
@@ -28,17 +29,18 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="Ty91mF8MukUZ2n_4v4YxxiztWxZeKbe4JkuCSV0doA0"
         />
-
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-659N63Y67S"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-659N63Y67S');
-        </script>
       </Head>
+
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-659N63Y67S"
+      ></Script>
+      <Script id="google-analytics">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-659N63Y67S');`}
+      </Script>
 
       <html lang="en">
         <body className={inter.className}>
