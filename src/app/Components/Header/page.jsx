@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link"
 const Header = () => {
 
   return (
@@ -9,7 +9,8 @@ const Header = () => {
         </div>
         <div>
             <ul className="flex gap-4 sm:2">
-                <li className=" cursor-pointer hover:text-yellow-300">Bollywood</li>
+              <Link href='/posts/IBomma'> <li className=" cursor-pointer hover:text-yellow-300">IBomma</li>  </Link>
+                
                 <li className=" cursor-pointer hover:text-yellow-300">Hollywood</li>
                 <li className=" cursor-pointer hover:text-yellow-300">Web Series</li>
         
